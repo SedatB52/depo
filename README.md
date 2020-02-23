@@ -1,2 +1,2 @@
 Sedat Bilece 
-Marmara Universty Computer Engineering 
+Marmara University Computer Engineering 
