@@ -3,17 +3,14 @@
 #include <stdbool.h>
  
 #define STACKLIMIT 5
+
  
-// ************ Muhammed Eminoglu ************
-// *********www.algoritmauzmani.com***********
-// *********www.muhammedeminoglu.com**********
- 
-//Stack veri yapımızı tutacağımız dizi
+//Stack veri yapÃ½mÃ½zÃ½ tutacaÃ°Ã½mÃ½z dizi
 int stack[STACKLIMIT - 1];
-//Stack'in en üzerindeki yani en son eklenmiş elemanını top değişkeninde tutuyoruz
+//Stack'in en Ã¼zerindeki yani en son eklenmiÃ¾ elemanÃ½nÃ½ top deÃ°iÃ¾keninde tutuyoruz
 int top = -1;
  
-//Yığının dolu olup olmadığını kontrol eden yardımcı fonksiyon
+//YÃ½Ã°Ã½nÃ½n dolu olup olmadÃ½Ã°Ã½nÃ½ kontrol eden yardÃ½mcÃ½ fonksiyon
 bool checkFull()
 {
     if(top >= STACKLIMIT - 1)
@@ -26,7 +23,7 @@ bool checkFull()
     }
 }
  
-//Yığının boş olup olmadığını kontrol eden yardımcı fonksiyon
+//YÃ½Ã°Ã½nÃ½n boÃ¾ olup olmadÃ½Ã°Ã½nÃ½ kontrol eden yardÃ½mcÃ½ fonksiyon
 bool checkEmpty()
 {
     if(top < 0)
@@ -39,31 +36,31 @@ bool checkEmpty()
     }
 }
  
-//Yığına eleman ekleyen fonksiyon
+//YÃ½Ã°Ã½na eleman ekleyen fonksiyon
 void push(int item)
 {
     bool control = checkFull();
-    //Eğer yığın dolu değilse
+    //EÃ°er yÃ½Ã°Ã½n dolu deÃ°ilse
     if(control == false)
     {
-        //top indisini bir artırıyor ve dizinin bu indisine değerimizi atıyoruz
+        //top indisini bir artÃ½rÃ½yor ve dizinin bu indisine deÃ°erimizi atÃ½yoruz
         top = top + 1;
         stack[top] = item;
     }
-    //Eğer yığın dolu ise hata mesajı döndürüyoruz
+    //EÃ°er yÃ½Ã°Ã½n dolu ise hata mesajÃ½ dÃ¶ndÃ¼rÃ¼yoruz
     else
     {
         printf("\nStackoverflow!!! ... ");
     }
 }
-//Yığından eleman çıkarak fonksiyon
+//YÃ½Ã°Ã½ndan eleman Ã§Ã½karak fonksiyon
 void pop()
 {
     bool control = checkEmpty();
-    //Eğer yığın boş değilse...
+    //EÃ°er yÃ½Ã°Ã½n boÃ¾ deÃ°ilse...
     if(control == false)
     {
-        //top indisini bir azaltıyoruz.
+        //top indisini bir azaltÃ½yoruz.
         top = top - 1;
     }
     else
